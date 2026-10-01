@@ -246,13 +246,3 @@ python evaluate.py \
 
 Evaluation ranks sentences by predicted salience, applies lowercase punctuation-stripped trigram blocking, selects 8 sentences for PubMed or 7 for arXiv, restores source order, and reports ROUGE-1, ROUGE-2, and ROUGE-L F1. The output JSON also contains every generated extractive summary and its selected source indices.
 
-## Reproducibility notes
-
-- TF-IDF IDF statistics and LDA must be fitted on the training split only.
-- The same fitted artifacts must be reused for validation and test data.
-- The paper reports means over three runs but does not publish the numeric seed IDs; the implementation uses configurable defaults `13`, `42`, and `2024`.
-- The paper does not specify KeyBERT's n-gram range, LDA passes/worker count, or the numeric seeds. The current values are implementation settings, not claimed paper parameters.
-- KeyBERT uses the existing `(1, 3)` keyphrase range and English stop-word filtering; these can be changed if the original experiment configuration becomes available.
-- The paper specifies the two-step multi-head hypergraph attention structure but does not fully expand its internal attention score; `model.py` documents the concrete attention implementation used here.
-- Most baseline results in the paper are taken from their original publications rather than controlled reproductions.
-

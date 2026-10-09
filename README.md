@@ -1,4 +1,4 @@
-# LIGHSum
+# LIGHSum 
 
 Implementation of LIGHSum for long-document extractive summarization.
 

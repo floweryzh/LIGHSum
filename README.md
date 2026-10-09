@@ -1,8 +1,8 @@
-# HyperLSS
+# LIGHSum
 
-Implementation of **HyperLSS: Hypergraph-Enhanced Lexical, Structural, and Semantic Graph Learning for Long Document Extractive Summarization**.
+Implementation of LIGHSum for long-document extractive summarization.
 
-HyperLSS combines a heterogeneous graph over sentence and word nodes with a sentence hypergraph containing section, topic, and keyword hyperedges. The two channels are fused after each encoding layer, and the first fused sentence representation is fed back into both second-layer encoders.
+LIGHSum combines a heterogeneous graph over sentence and word nodes with a sentence hypergraph containing section, topic, and keyword hyperedges. The two channels are fused after each encoding layer, and the first fused sentence representation is fed back into both second-layer encoders.
 
 ## Repository structure
 
